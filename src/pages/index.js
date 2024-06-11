@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <div style={{ display: 'flex', justifyContent: 'column', alignItems: 'center', flexWrap: 'wrap' }}>
+      <div>
         <Bio />
         <Carousel />
       </div>
