@@ -1,11 +1,13 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { MdOutlineWeb } from 'react-icons/md';  // Importing an example icon
 
-const Header = ({ siteTitle = "Portfolio" }) => {
+const Header = ({ siteTitle }) => {
   return (
     <header style={{ background: '#5F6A6A', padding: '0.5%' }}>
       <div style={{ margin: 'auto', maxWidth:'90%', display: 'flex', justifyContent: 'space-between', alignItems: 'space' }}>
-        <h1 style={{ margin: 0 }}>
+        <h1 style={{ margin: 0, display: 'flex', alignItems: 'center', fontSize: '1.5em'  }}>
+          <MdOutlineWeb size={32} color="white" style={{ marginRight: '10px' }} />
           <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
             {siteTitle}
           </Link>
