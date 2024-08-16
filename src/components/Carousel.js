@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import ProjectCard from './ProjectCard';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -14,18 +15,34 @@ const Carousel = () => {
     autoplaySpeed: 3000,
   };
 
-  const images = [
-    "https://source.unsplash.com/random/800x600",
-    "https://source.unsplash.com/random/800x601",
-    "https://source.unsplash.com/random/800x602"
+
+  const projects = [
+    {
+      title: "Project One",
+      description: "This is the description for project one.",
+      image: "https://www.gifcen.com/wp-content/uploads/2021/06/meme-gif-8.gif",
+      link: "https://example.com/project-one"
+    },
+    {
+      title: "Project Two",
+      description: "This is the description for project two.",
+      image: "https://www.gifcen.com/wp-content/uploads/2022/01/meme-gif-3.gif",
+      link: "https://example.com/project-two"
+    },
+    {
+      title: "Project Three",
+      description: "This is the description for project three.",
+      image: "https://media0.giphy.com/media/eMCVSw9v28iRARFFAt/giphy.gif",
+      link: "https://example.com/project-three"
+    }
   ];
 
   return (
-    <div style={{ margin: '1%' }}>
+    <div style={{ margin: '1%',  backgroundColor: '#f0f0f0', padding: '20px', justifyContent:'center'}}>
       <Slider {...settings}>
-        {images.map((url, index) => (
-          <div key={index}>
-            <img src={url} alt={`Slide ${index + 1}`} style={{ width: '100%', height: 'auto' }} />
+        {projects.map((project, index) => (
+          <div key={index}  style={{ display: 'flex', justifyContent: 'center' }}>
+            <ProjectCard project={project} />
           </div>
         ))}
       </Slider>

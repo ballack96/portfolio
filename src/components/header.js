@@ -1,13 +1,13 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { MdOutlineWeb } from 'react-icons/md';  // Importing an example icon
+import profileIcon from "../images/PixarMe.jpg"
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle = "Ranojoy Deb" }) => {
   return (
     <header style={{ background: '#5F6A6A', padding: '0.5%' }}>
-      <div style={{ margin: 'auto', maxWidth:'90%', display: 'flex', justifyContent: 'space-between', alignItems: 'space' }}>
-        <h1 style={{ margin: 0, display: 'flex', alignItems: 'center', fontSize: '1.5em'  }}>
-          <MdOutlineWeb size={32} color="white" style={{ marginRight: '10px' }} />
+      <div style={{ margin: 'auto', maxWidth:'90%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <h1 style={{ margin: 0, display: 'flex', alignItems: 'center', fontSize: '1.5em', alignItems:'center', whiteSpace:'nowrap' }}>
+        <img src={profileIcon}   style={{ width: '32px', height: '32px', marginRight: '5%', marginTop:'auto', marginBottom:'auto' }} />
           <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
             {siteTitle}
           </Link>

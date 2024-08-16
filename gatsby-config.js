@@ -10,8 +10,8 @@
 module.exports = {
   siteMetadata: {
     title: `Portfolio`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `Ranojoy Deb`,
+    description: `Ranojoy Deb's portfolio showcasing skills and projects.`,
+    author: `ballack96`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
